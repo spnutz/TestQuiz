@@ -18,6 +18,7 @@ from django.urls import path
 from Quiz import views
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', views.home_page, name='home'),
 
 ]
