@@ -8,18 +8,23 @@
     <form method= 'POST'>
         <H3>Create Quiz</H3>
         <input name='quizbox' placeholder="enter you quiz">
-        <input type="submit" value="enter"/>  
+         
         <H3>Create Answer</H3>
-        <select name= "answer">
-            <option value="True">True</option>
-            <option value="Fale">Fale</option>
+        <input type="radio" name="answer" value="True"> True<br>
+        <input type="radio" name="answer" value="True"> False<br>
+        <input type="submit" name="enter">
+
         {% csrf_token %}
 
         </select>
+        {{ quiz_item }}
 
         
-        
     </form>
+    <br>
+    <br>
+    <br>
+    <input type="button" value="Go to Quiz" onclick="window.location.href='/answer/'">
 
 
 </body>

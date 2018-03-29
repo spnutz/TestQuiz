@@ -10,6 +10,11 @@ class HomePageTest(TestCase):
         found = resolve('/')
         self.assertEqual(found.func, home_page)
 
+class AnsPageTest(TestCase):
+    def test_use_answer_page(self):
+        found = resolve('answer/')
+        self.assertEqual(found.func, goQuiz)
+
 class QuestionModel(TestCase):
     def test_can_save_model(self):
         frist_question = Question()

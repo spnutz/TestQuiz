@@ -20,5 +20,6 @@ from Quiz import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home_page, name='home'),
+    path('answer/', views.goQuiz, name='answer'),
 
 ]

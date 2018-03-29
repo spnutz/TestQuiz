@@ -15,10 +15,14 @@ class NewVisitorTest(unittest.TestCase):
 
         self.assertIn('Quiz', self.browser.title)
 
-        ###Question
+        ###Create Question
         input_box = self.browser.find_element_by_name('quizbox')
         self.assertEqual(input_box.get_attribute('placeholder'), 'enter you quiz')
         input_box.send_keys('dog is animal ?')
+
+        ###Create Answer
+        choice = self.browser.find_element_by_name('answer')
+        choice.send_keys('False')
         self.fail('Finish the test!')
 
 

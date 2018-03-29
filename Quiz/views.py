@@ -4,9 +4,11 @@ from Quiz.models import Question
 
 def home_page(request):
     if request.method == 'POST':
-        Question.objects.create(question=request.POST.get('quizbox'))
-        Question.objects.create(ans=request.POST.get('answer'))
+        Question.objects.create(question=request.POST.get('quizbox',''), ans=request.POST.get('answer',''))
         quiz_item = Question.objects.all()
         return render(request, 'home.html', {'quiz_item':quiz_item})
     
     return render(request, 'home.html')
+
+def goQuiz(request):
+    return render(request, 'answer.html')
