@@ -5,6 +5,13 @@
     <H3>Quiz Test</H3>
 </head>
 <body>
+    <form method= 'POST'>
+        <input name='quizbox' placeholder="enter you quiz">
+        <input type="submit" value="enter"/>  
+        {% csrf_token %}
+        
+    </form>
+
 
 </body>
 </html>
