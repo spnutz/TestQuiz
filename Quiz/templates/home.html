@@ -1,31 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quiz</title>
-    <H1>Quiz Test</H1>
+    <title></title>
 </head>
 <body>
-    <form method= 'POST'>
-        <H3>Create Quiz</H3>
-        <input name='quizbox' placeholder="enter you quiz">
-         
-        <H3>Create Answer</H3>
-        <input type="radio" name="answer" value="True"> True<br>
-        <input type="radio" name="answer" value="True"> False<br>
-        <input type="submit" name="enter">
-
-        {% csrf_token %}
-
-        </select>
-        {{ quiz_item }}
-
-        
-    </form>
+  <center>
+    <h1>Wellcome to Quiz</h1>
     <br>
-    <br>
-    <br>
-    <input type="button" value="Go to Quiz" onclick="window.location.href='/answer/'">
-
+       <input type="button" value="Create Quiz" onclick="window.location.href='/createquiz/'">
+       <input type="button" value="Go to Quiz" onclick="window.location.href='/answer/'">
+  </center>
 
 </body>
 </html>

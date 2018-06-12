@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <H1>Quiz Test</H1>
+</head>
+<body>
+    <form method= 'POST'>
+        <H3>Create Quiz</H3>
+        <input name='quizbox' placeholder="enter you quiz">
+         
+        <H3>Create Answer</H3>
+        <input type="radio" name="answer" value="True"> True<br>
+        <input type="radio" name="answer" value="False"> False<br>
+        <input type="submit" name="enter">
+
+        {% csrf_token %}
+
+        </select>
+        {{ quiz_item }}
+
+        
+    </form>
+    
+
+
+</body>
+</html>

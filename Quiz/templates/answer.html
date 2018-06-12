@@ -5,8 +5,14 @@
     <h1>Answer</h1>
 </head>
 <body>
-    <center><H1>  </H1></center>    
+    <form method="POST">
+        {% for q in show_quiz %}
+            <p>{{forloop.counter}} {{q.question}}</p>
+            <input type="radio" name="">
 
+    
+        {% endfor %}
 
+    </form>
 </body>
 </html>
