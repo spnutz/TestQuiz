@@ -1,0 +1,4 @@
+
+COMMIT : SHOW QUESTIONS IN ANSWER PAGE
+
+ทำการสร้างหน้า home ใหม่ให้มี 2ปุ่ม คือ create quiz เพื่อเข้าไปสร้างคำถาม และ go to quize เพื่อเข้าไปตอบคำถาม ซึ่งเมื่อกดเข้าไปที่ปุ่ม go to quize จะเข้าไปที่หน้า answer page ซึ่งจะใช้ {% for q in show_quiz %} เพื่อเป็นการวนลูปเพื่อเข้าถึงข้อมูลใน show_quiz และ {{q.question}} เพื่อแสดงคำถาม
