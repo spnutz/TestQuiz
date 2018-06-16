@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <!--title>Answer</title>
-    <h1>Answer</h1>
-</head>
-<body>
-    <form method="POST" action="/score/">
-        {% csrf_token %}
-        {% for q in show_quiz %}
-            <p>{{forloop.counter}} {{q.question_text}}</p>
-            <input type="radio" name="choice" value="{{q.choice1}}"> {{q.choice1}} <br>
-           
-            <input type="radio" name="choice" value="{{q.choice2}}"> {{q.choice2}} <br>
-           
 
-    
-        {% endfor %}
-
-        <input type="submit" name="submit">
-
-    </form>
-</body>
-</html-->
-
-
+<H1>Select your Quiz</H1>
 <ul>
 {% for question in show_quiz %}
-    <li><a href="{% url 'Quiz:score' question.id %}">{{ question.question_text }}</a></li>
+    <li><a href="{% url 'Quiz:detail' question.id %}" id="q{{forloop.counter}}" >{{ question.question_text }}</a></li>
 {% endfor %}
 </ul>
+
+

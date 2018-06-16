@@ -29,13 +29,13 @@ def goQuiz(request):
     show_quiz = Question.objects.all()
     return render(request, 'answer.html', {'show_quiz':show_quiz})
 
-def score(request, question_id):
+def detail(request, question_id):
     try:
         question = Question.objects.get(pk=question_id)
-        choice_item = Choice.objects.all()
+        choice_item = Choice.objects.get(question=question_id)
     except Question.DoesNotExits:
         raise Http404("Question does not exits")
-    return render(request, 'score.html', {'question':question, 'choice_item':choice_item})
+    return render(request, 'detail.html', {'question':question, 'choice_item':choice_item})
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

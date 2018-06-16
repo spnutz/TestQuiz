@@ -1,0 +1,11 @@
+<h1>{{ question.question_text }}</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'Quiz:vote' question.id %}" method="post">
+{% csrf_token %}
+
+<input type="radio" name="choice" id="c1" value="{{choice_item.choice1}}">{{choice_item.choice1}} <br>
+<input type="radio" name="choice" id="c2" value="{{choice_item.choice2}}">{{choice_item.choice2}} <br>
+
+
+<input type="submit" value="submit" id= "send"/>
+</form>
