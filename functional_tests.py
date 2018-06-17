@@ -68,11 +68,16 @@ class NewVisitorTest(unittest.TestCase):
         select_quiz.click()
 
         # select choice
+        choice_1 = self.browser.find_element_by_id("c1")
+        self.assertEqual(choice_1.get_attribute('value'), 'True')
+
         select_choice = self.browser.find_element_by_id("c2")
+        self.assertEqual(select_choice.get_attribute('value'), 'False')
         select_choice.click()
         time.sleep(2)
 
         submit_Bt = self.browser.find_element_by_id('send')
+        self.assertEqual(submit_Bt.get_attribute('value'), 'submit')
         submit_Bt.click()
         time.sleep(2)
 
@@ -82,6 +87,7 @@ class NewVisitorTest(unittest.TestCase):
         self.assertIn('You answer True', result_text)
 
         back_to_quiz_bt = self.browser.find_element_by_id("back")
+        self.assertEqual(back_to_quiz_bt.get_attribute('value'), 'Back to Quiz')
         back_to_quiz_bt.click()
         time.sleep(2)
 

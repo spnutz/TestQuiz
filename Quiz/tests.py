@@ -21,17 +21,27 @@ class CreateChoicePageTest(TestCase):
         response = self.client.get('/quiz/createquiz/')
         self.assertTemplateUsed(response, 'createquiz.html')
 
+    def test_can_post_question(self):
+        self.client.post('http://localhost:8000/quiz/createquiz/', 
+            data={'question_text':'cat is dog', 'ans':'False'})
+        self.assertEqual(Question.objects.count(),1)
 
+    def test_can_post_choice(self):
+        self.client.post('http://localhost:8000/quiz/createquiz/',
+            data={'choice1':'True', 'choice2':'False'})
+        self.assertEqual(Choice.objects.count(),1)
+
+    def test_can_redirect_after_post(self):
+        response = self.client.post('http://localhost:8000/quiz/createquiz/',
+            data={'question_text':'cat is dog', 'ans':'False'})
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response['location'], 'http://localhost:8000/quiz/')
+
+
+class GotoQuiz(TestCase):
     def test_show_quiz_page(self):
         response = self.client.get('/quiz/goQuiz/')
         self.assertTemplateUsed(response, 'answer.html')
-
-   
-
-
-
-
-
 
 class itemModel(TestCase):
     def test_can_save_model_question(self):
@@ -64,7 +74,6 @@ class itemModel(TestCase):
         item_choice.choice2 = 'False'
         item_choice.question = list_choice
         item_choice.save()
-
 
         save_choice = Choice.objects.all()
         self.assertEqual(save_choice.count(),1)

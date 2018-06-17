@@ -356,3 +356,38 @@ _onJSONObjectReady/<()@transport.js:500
 1529155164469	Marionette	WARN	TLS certificate errors will be ignored for this session
 [Child 2992, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-SqrJ_m/firefox-60.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
+1529214084271	geckodriver	INFO	geckodriver 0.19.1
+1529214084273	geckodriver	INFO	Listening on 127.0.0.1:43879
+1529214085369	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.FKdn6Lx0DVWt"
+1529214088230	Marionette	INFO	Listening on port 42549
+1529214088278	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 7676, Chrome_ChildThread] WARNING: pipe error (17): Connection reset by peer: file /build/firefox-SqrJ_m/firefox-60.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 7676, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-SqrJ_m/firefox-60.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1529225958624	geckodriver	INFO	geckodriver 0.19.1
+1529225958627	geckodriver	INFO	Listening on 127.0.0.1:33437
+1529225959725	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.Syocfg11fIc1"
+1529225962564	Marionette	INFO	Listening on port 43447
+1529225962648	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 9135, Chrome_ChildThread] WARNING: pipe error (17): Connection reset by peer: file /build/firefox-SqrJ_m/firefox-60.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1529226557450	geckodriver	INFO	geckodriver 0.19.1
+1529226557453	geckodriver	INFO	Listening on 127.0.0.1:57037
+1529226558542	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.QQhuTRBuI4UR"
+1529226561709	Marionette	INFO	Listening on port 35129
+1529226561766	Marionette	WARN	TLS certificate errors will be ignored for this session
+1529226563177	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
+onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
+_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
+Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
+uninit()@resource://activity-stream/lib/Store.jsm:151
+uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
+uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
+shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
+callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
+observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
+1529227218831	geckodriver	INFO	geckodriver 0.19.1
+1529227218834	geckodriver	INFO	Listening on 127.0.0.1:54869
+1529227219925	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.tiNE90YHz3ky"
+1529227222724	Marionette	INFO	Listening on port 34407
+1529227222746	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Child 10410, Chrome_ChildThread] WARNING: pipe error (17): Connection reset by peer: file /build/firefox-SqrJ_m/firefox-60.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Child 10410, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /build/firefox-SqrJ_m/firefox-60.0.1+build2/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
